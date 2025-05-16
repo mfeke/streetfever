@@ -8,22 +8,33 @@
     color: rgb(155, 152, 152);
 
 }
+
 .span {
     font-size: 13px;
 }
-.z{
+
+.z {
     z-index: 1;
 }
-.offcanvas{
+
+.offcanvas {
     width: 90% !important;
 }
-.bg-s{
+
+.bg-s {
     background-color: gainsboro;
 }
-.logo-2{
+
+.logo-2 {
     width: 50px;
     border-radius: 5px;
 }
-.text-r{
+
+.text-r {
     color: red;
+}
+
+#subOffcanvas {
+    z-index: 1061;
+    /* higher than default (1060) */
 }

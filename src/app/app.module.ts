@@ -20,6 +20,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CartComponent } from './components/cart/cart.component';
     HomeComponent,
     NavbarComponent,
     CartComponent,
+    ProfileComponent,
 
   ],
   imports: [

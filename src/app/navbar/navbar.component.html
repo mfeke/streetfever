@@ -73,19 +73,10 @@
             aria-label="Close"></button>
     </div>
     <div class="offcanvas-body pt-3">
-        <div class="d-flex justify-content-between align-items-center">
-            <h6 class=" mb-0 bold text-r">SALE</h6>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                fill="currentColor" class="bi bi-chevron-right"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg>
-        </div>
-        <hr>
-        <div class="d-flex justify-content-between align-items-center">
 
-            <h6 class="text-black mb-0 bold">MENS'</h6>
+        <div class="d-flex justify-content-between align-items-center"  (click)="click('ladies')">
+            <h6 class="text-black mb-0 bold"
+               >WOMENS'</h6>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 fill="currentColor" class="bi bi-chevron-right"
                 viewBox="0 0 16 16">
@@ -94,8 +85,9 @@
             </svg>
         </div>
         <hr>
-        <div class="d-flex justify-content-between align-items-center">
-            <h6 class="text-black mb-0 bold">WOMENS'</h6>
+        <div class="d-flex justify-content-between align-items-center" (click)="click('men')">
+
+            <h6 class="text-black mb-0 bold" >MENS'</h6>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 fill="currentColor" class="bi bi-chevron-right"
                 viewBox="0 0 16 16">
@@ -105,8 +97,28 @@
         </div>
         <hr>
 
+        <div class="d-flex justify-content-between align-items-center" (click)="click('kids')">
+            <h6 class="text-black mb-0 bold" >KIDS'</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="currentColor" class="bi bi-chevron-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between align-items-center" (click)="click('sport')">
+            <h6 class=" mb-0 bold " >SPORTS'</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="currentColor" class="bi bi-chevron-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+        </div>
+        <hr>
         <div class="d-flex justify-content-between align-items-center">
-            <h6 class="text-black mb-0 bold">KIDS'</h6>
+            <h6 class=" mb-0 bold " (click)="click('outlet')">OUTLETS'</h6>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 fill="currentColor" class="bi bi-chevron-right"
                 viewBox="0 0 16 16">
@@ -143,7 +155,8 @@
 
         </div>
         <hr>
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center"
+            data-bs-dismiss="offcanvas" routerLink="/account/login">
             <div class="d-flex align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                     fill="currentColor" class="bi me-3 bi-person"
