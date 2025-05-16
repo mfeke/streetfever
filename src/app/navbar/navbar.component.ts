@@ -54,53 +54,25 @@ export class NavbarComponent implements OnInit {
       CategoryValue: ""
     },
     {
-      CatName: "kids",
-      CategoriesArray: [
-        {
-          CatName: "Shoes",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Clothing",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Accessories and Equipment",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Sports",
-          CategoryValue: ""
-
-        }
-
-
-      ],
-      CategoryValue: ""
-    },
-    {
       CatName: "men",
       CategoriesArray: [
         {
-          CatName: "Shoes",
+          CatName: "shoes",
           CategoryValue: ""
 
         },
         {
-          CatName: "Clothing",
+          CatName: "clothing",
           CategoryValue: ""
 
         },
         {
-          CatName: "Accessories and Equipment",
+          CatName: "accessories",
           CategoryValue: ""
 
         },
         {
-          CatName: "Sports",
+          CatName: "sports",
           CategoryValue: ""
 
         }
