@@ -7,6 +7,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
+    { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
+
   { path: "account/login", component: LoginComponent},
   { path: "account/register", component: RegisterComponent},
   {path:"account", component:ProfileComponent},
