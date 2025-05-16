@@ -86,14 +86,14 @@ hr {
 }
 
 .contain-image {
-    width: 325px;
-    height: 375px;
+    width: 300px;
+    height: 400px;
     overflow: hidden;
 }
 
 .image {
-    width: 325px;
-    height: 375px;
+    width: 300px;
+    height: 400px;
 }
 
 .font {
