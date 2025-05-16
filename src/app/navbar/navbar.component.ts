@@ -9,8 +9,112 @@ import { CategoryService } from '../service/category.service';
 })
 export class NavbarComponent implements OnInit {
 
+  navLists = [
+    {
+      CatName: "sales",
+      CategoriesArray: [
+        {
+          CatName: "all sales",
+        },
+        {
+          CatName: "womens",
+        },
+        {
+          CatName: "kids",
+        }
+      ],
+      CategoryValue: "mens"
+    },
+    {
+      CatName: "women",
+      CategoriesArray: [
+        {
+          CatName: "Shoes",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Clothing",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Accessories and Equipment",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Sports",
+          CategoryValue: ""
+
+        }
+
+
+      ],
+      CategoryValue: ""
+    },
+    {
+      CatName: "kids",
+      CategoriesArray: [
+        {
+          CatName: "Shoes",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Clothing",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Accessories and Equipment",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Sports",
+          CategoryValue: ""
+
+        }
+
+
+      ],
+      CategoryValue: ""
+    },
+    {
+      CatName: "men",
+      CategoriesArray: [
+        {
+          CatName: "Shoes",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Clothing",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Accessories and Equipment",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "Sports",
+          CategoryValue: ""
+
+        }
+
+
+      ],
+      CategoryValue: ""
+    },
+  ]
+
+
   nvaList: any[] = []
   name = ["women", "men", "kids"]
+  newList: any[] = []
   constructor(private categoryService: CategoryService) { }
   ngOnInit() {
     this.categoryService.getAllCategory().subscribe({
@@ -26,10 +130,8 @@ export class NavbarComponent implements OnInit {
 
   }
   click(data: any) {
-
     // console.log(data)
-    const newCategory = this.nvaList.filter((category:any) => category.CategoryValue === data);
-    console.log(newCategory)
+    this.nvaList = this.nvaList.filter((category: any) => category.CategoryValue === data);
   }
 
 }
