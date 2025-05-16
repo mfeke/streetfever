@@ -85,7 +85,7 @@
                     *ngIf="nav.CatName !== 'sales'">{{nav.CatName |
                     uppercase}}</p>
             </div>
-            <div class=" text-black  bg-white h-100">
+            <div class=" text-black  bg-white h-100" *ngIf="nav.CategoriesArray.length > 0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
                     fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                     <path

@@ -25,6 +25,7 @@ export class NavbarComponent implements OnInit {
       ],
       CategoryValue: "mens"
     },
+   
     {
       CatName: "women",
       CategoriesArray: [
@@ -53,6 +54,40 @@ export class NavbarComponent implements OnInit {
       ],
       CategoryValue: ""
     },
+     {
+      CatName: "men",
+      CategoriesArray: [
+        {
+          CatName: "shoes",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "clothing",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "accessories",
+          CategoryValue: ""
+
+        },
+        {
+          CatName: "sports",
+          CategoryValue: ""
+
+        }
+
+
+      ],
+      CategoryValue: ""
+    },
+    {
+      CatName: "accessories",
+      CategoriesArray: [],
+      CategoryValue: ""
+    },
+
     {
       CatName: "kids",
       CategoriesArray: [
@@ -81,39 +116,7 @@ export class NavbarComponent implements OnInit {
       ],
       CategoryValue: ""
     },
-    {
-      CatName: "accessories",
-      CategoriesArray: [],
-      CategoryValue: ""
-    },
-    {
-      CatName: "men",
-      CategoriesArray: [
-        {
-          CatName: "shoes",
-          CategoryValue: ""
 
-        },
-        {
-          CatName: "clothing",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "accessories",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "sports",
-          CategoryValue: ""
-
-        }
-
-
-      ],
-      CategoryValue: ""
-    },
   ]
 
 
