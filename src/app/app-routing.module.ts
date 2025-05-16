@@ -4,12 +4,14 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
   { path: "account/login", component: LoginComponent},
   { path: "account/register", component: RegisterComponent},
   {path:"account", component:ProfileComponent},
-  { path:"home", component: HomeComponent}
+  { path:"home", component: HomeComponent},
+  {path:"cart", component:CartComponent}
 ];
 
 
