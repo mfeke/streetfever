@@ -38,3 +38,7 @@
     z-index: 1061;
     /* higher than default (1060) */
 }
+.bolder{
+    font-weight: bolder;
+    font-size: 15px;
+}
