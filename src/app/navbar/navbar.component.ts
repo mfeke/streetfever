@@ -8,7 +8,7 @@ import { CategoryService } from '../service/category.service';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit {
-
+navMain:any = ""
   navLists = [
     {
       CatName: "sales",
@@ -120,26 +120,16 @@ export class NavbarComponent implements OnInit {
   ]
 
 
-  nvaList: any[] = []
-  name = ["women", "men", "kids"]
-  newList: any[] = []
+
   constructor(private categoryService: CategoryService) { }
   ngOnInit() {
-    this.categoryService.getAllCategory().subscribe({
-      next: data => {
-        // console.log(data)
-        this.nvaList = data.categories
-        console.log(this.nvaList)
-
-      }
-    })
 
 
 
   }
-  click(data: any) {
+  open(data: any) {
     // console.log(data)
-    this.nvaList = this.nvaList.filter((category: any) => category.CategoryValue === data);
+    console.log(data)
   }
 
 }

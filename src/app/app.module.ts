@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ProductListsComponent } from './components/product-lists/product-lists.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     NavbarComponent,
     CartComponent,
     ProfileComponent,
+    ProductListsComponent,
 
   ],
   imports: [
