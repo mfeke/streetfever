@@ -1,3 +1,10 @@
 .bolder {
+    font-weight: bold;
+}
+
+.font {
     font-size: 15px;
+}
+.line{
+    text-decoration: underline;
 }
