@@ -8,7 +8,7 @@ import { CategoryService } from '../service/category.service';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit {
-navMain:any = ""
+  navArrays: any[] = []
   navLists = [
     {
       CatName: "sales",
@@ -25,7 +25,7 @@ navMain:any = ""
       ],
       CategoryValue: "mens"
     },
-   
+
     {
       CatName: "women",
       CategoriesArray: [
@@ -54,7 +54,7 @@ navMain:any = ""
       ],
       CategoryValue: ""
     },
-     {
+    {
       CatName: "men",
       CategoriesArray: [
         {
@@ -123,7 +123,12 @@ navMain:any = ""
 
   constructor(private categoryService: CategoryService) { }
   ngOnInit() {
-
+    this.categoryService.getAllCategory().subscribe({
+      next: data => {
+        console.log(data.categories)
+        this.navArrays = data.categories
+      }
+    })
 
 
   }
