@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: "account/register", component: RegisterComponent },
   { path: "account", component: ProfileComponent },
   { path: "home", component: HomeComponent },
-  { path: "products", component: ProductListsComponent },
+  { path: "c/:name", component: ProductListsComponent },
   { path: "cart", component: CartComponent }
 ];
 

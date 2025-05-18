@@ -6,7 +6,7 @@
     <div class="container bg-white pt-3  pb-3 ">
         <div class="d-flex  justify-content-between align-items-center ">
             <img src="https://i.postimg.cc/y6tXFq4T/street-fever.png"
-                class="logo " alt>
+                class="logo " alt routerLink="/home">
 
             <div class="d-flex align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@
 <div class="container pt-3  mb-3 ">
     <div class="d-flex  justify-content-between align-items-center ">
         <img src="https://i.postimg.cc/y6tXFq4T/street-fever.png" class="logo "
-            alt>
+            alt  routerLink="/home">
 
         <div class="d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -78,8 +78,10 @@
             <div
                 class="accordion-item border border-0 my-2"
                 *ngFor="let nav of navArrays; let i = index">
-                <div class="accordion-header">
+                <div class="accordion-header "  data-bs-dismiss="offcanvas" routerLink="/c/{{nav.categoryValue}}" >
                     <button
+                        *ngIf="nav.categoryValue === 'sales'|| nav.categoryValue === 'accessories' "
+                        
                         class="accordion-button btn p-0 bg-white text-black shadow-none collapsed"
                         type="button"
                         [ngClass]="{'accordion-button': nav.CategoriesArray.length > 0 && nav.categoryValue !== 'accessories' }"
@@ -88,11 +90,28 @@
                         [attr.aria-controls]="'collapse' + i"
                         aria-expanded="false">
                         <p class="mb-0 bolder text-r"
-                            *ngIf="nav.categoryValue === 'sales'">
+                            *ngIf="nav.categoryValue !== 'accessories'">
                             {{ nav.CatName | uppercase }}
                         </p>
                         <p class="mb-0 bolder"
                             *ngIf="nav.categoryValue !== 'sales'">
+                            {{ nav.CatName | uppercase }}
+                        </p>
+                    </button>
+
+                </div>
+                <div class="accordion-header">
+                    <button
+                        *ngIf="nav.categoryValue !== 'sales' && nav.categoryValue !== 'accessories' "
+                        class="accordion-button btn p-0 bg-white text-black shadow-none collapsed"
+                        type="button"
+                        [ngClass]="{'accordion-button': nav.CategoriesArray.length > 0 && nav.categoryValue !== 'accessories' }"
+                        data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapse' + i"
+                        [attr.aria-controls]="'collapse' + i"
+                        aria-expanded="false">
+                        <p class="mb-0 bolder"
+                            *ngIf="nav.categoryValue !== 'sales' || nav.categoryValue !== 'accessories'">
                             {{ nav.CatName | uppercase }}
                         </p>
                     </button>
@@ -157,7 +176,8 @@
         <hr>
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24"
                     fill="currentColor" class="bi me-3 bi-shop"
                     viewBox="0 0 16 16">
                     <path
@@ -171,7 +191,8 @@
         <hr>
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24"
                     fill="currentColor" class="bi me-3 bi-truck"
                     viewBox="0 0 16 16">
                     <path
@@ -186,7 +207,8 @@
         <div class="d-flex justify-content-between align-items-center"
             data-bs-dismiss="offcanvas" routerLink="/account/login">
             <div class="d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                <svg xmlns="http://www.w3.org/2000/svg" width="22"
+                    height="22"
                     fill="currentColor" class="bi me-3 bi-person"
                     viewBox="0 0 16 16">
                     <path
