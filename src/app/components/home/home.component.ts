@@ -14,6 +14,7 @@ export class HomeComponent {
   imageUrl = "https://i.postimg.cc/Y2NyCDKC/1000002455.jpg"
   showHelp() {
     this.isHelp = !this.isHelp
+    
 
   }
 }

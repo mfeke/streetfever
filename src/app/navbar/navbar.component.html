@@ -74,14 +74,52 @@
             aria-label="Close"></button>
     </div>
     <div class="offcanvas-body pt-3">
-        <div class="contain my-2" *ngFor="let nav of navArrays">
+        <div class="accordion" id="accordionExample">
             <div
-                class="d-flex justify-content-between align-items-center"
+                class="accordion-item border border-0 my-2"
+                *ngFor="let nav of navArrays; let i = index">
+                <div class="accordion-header">
+                    <button
+                        class="accordion-button btn p-0 bg-white text-black shadow-none collapsed"
+                        type="button"
+                        [ngClass]="{'accordion-button': nav.CategoriesArray.length > 0 && nav.categoryValue !== 'accessories' }"
+                        data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapse' + i"
+                        [attr.aria-controls]="'collapse' + i"
+                        aria-expanded="false">
+                        <p class="mb-0 bolder text-r"
+                            *ngIf="nav.categoryValue === 'sales'">
+                            {{ nav.CatName | uppercase }}
+                        </p>
+                        <p class="mb-0 bolder"
+                            *ngIf="nav.categoryValue !== 'sales'">
+                            {{ nav.CatName | uppercase }}
+                        </p>
+                    </button>
+                </div>
+                <div
+                    class="accordion-collapse collapse mt-2"
+                    [id]="'collapse' + i"
+                    *ngIf="nav.CategoriesArray.length > 0 && nav.categoryValue !== 'accessories'"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body p-0">
+                        <div class="contain"
+                            *ngFor="let subNav of nav.CategoriesArray">
+                            <p>{{ subNav }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="contain my-2" *ngFor="let nav of navArrays">
+            <div
+                class="accordion-button bg-white shadow-none collapsed"
                 data-bs-toggle="collapse"
                 [attr.href]="'#' + nav.CatName"
                 role="button"
                 aria-expanded="false"
-                [attr.aria-controls]="nav.CatName">
+                [attr.aria-controls]="nav.CatName"
+                >
                 <a
                     class="d-flex align-items-center text-decoration-none text-black">
 
@@ -92,16 +130,21 @@
                         *ngIf="nav.categoryValue !== 'sales'">{{nav.CatName |
                         uppercase}}</p>
                 </a>
-                <div class=" text-black  bg-white h-100"
-                    *ngIf="nav.CategoriesArray.length > 0 && nav.categoryValue !== 'accessories' ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28"
+                <div class="text-black bg-white h-100"
+                    *ngIf="nav.CategoriesArray.length > 0 && nav.categoryValue !== 'accessories'">
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg" width="28"
                         height="28"
-                        fill="currentColor" class="bi bi-plus"
-                        viewBox="0 0 16 16">
+                        fill="currentColor" class="bi hide bi-plus"
+                        viewBox="0 0 16 16" *ngIf="isHelp || nav.catName ">
                         <path
                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
                     </svg>
+
+
                 </div>
+
             </div>
             <div class="collapse" [attr.id]="nav.CatName">
                 <div class="contain" *ngFor="let subNav of nav.CategoriesArray">
@@ -109,7 +152,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
         <hr>
         <div class="d-flex justify-content-between align-items-center">

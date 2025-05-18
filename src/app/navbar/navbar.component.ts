@@ -118,6 +118,9 @@ export class NavbarComponent implements OnInit {
     },
 
   ]
+  isHelp: any;
+  isEnabled: any;
+  isExpanded: any;
 
 
 
@@ -127,14 +130,16 @@ export class NavbarComponent implements OnInit {
       next: data => {
         console.log(data.categories)
         this.navArrays = data.categories
+
       }
     })
 
 
   }
-  open(data: any) {
-    // console.log(data)
-    console.log(data)
-  }
 
+  showHelp() {
+    this.isEnabled = !this.isEnabled
+    console.log(this.isEnabled)
+
+  }
 }
