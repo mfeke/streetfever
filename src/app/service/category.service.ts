@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiUrl = 'http://localhost:3000/api/category';
+  private apiUrl = 'https://streetfeverapi.vercel.app/api/category/';
 
   constructor(private http: HttpClient,) { }
 
