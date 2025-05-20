@@ -9,137 +9,28 @@ import { CategoryService } from '../service/category.service';
 })
 export class NavbarComponent implements OnInit {
   navArrays: any[] = []
-  navLists = [
-    {
-      CatName: "sales",
-      CategoriesArray: [
-        {
-          CatName: "all sales",
-        },
-        {
-          CatName: "womens",
-        },
-        {
-          CatName: "kids",
-        }
-      ],
-      CategoryValue: "mens"
-    },
-
-    {
-      CatName: "women",
-      CategoriesArray: [
-        {
-          CatName: "Shoes",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Clothing",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Accessories and Equipment",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Sports",
-          CategoryValue: ""
-
-        }
-
-
-      ],
-      CategoryValue: ""
-    },
-    {
-      CatName: "men",
-      CategoriesArray: [
-        {
-          CatName: "shoes",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "clothing",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "accessories",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "sports",
-          CategoryValue: ""
-
-        }
-
-
-      ],
-      CategoryValue: ""
-    },
-    {
-      CatName: "accessories",
-      CategoriesArray: [],
-      CategoryValue: ""
-    },
-
-    {
-      CatName: "kids",
-      CategoriesArray: [
-        {
-          CatName: "Shoes",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Clothing",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Accessories and Equipment",
-          CategoryValue: ""
-
-        },
-        {
-          CatName: "Sports",
-          CategoryValue: ""
-
-        }
-
-
-      ],
-      CategoryValue: ""
-    },
-
-  ]
-  isHelp: any;
-  isEnabled: any;
-  isExpanded: any;
-
-
+  subArray: any[] = []
 
   constructor(private categoryService: CategoryService) { }
   ngOnInit() {
-    this.categoryService.getAllCategory().subscribe({
+    this.categoryService.getMainCategory().subscribe({
       next: data => {
-        console.log(data.categories)
         this.navArrays = data.categories
 
+        console.log(this.navArrays)
+      }
+    })
+    this.categoryService.getAllCategory().subscribe({
+      next: data => {
+        this.subArray = data.categories
       }
     })
 
-
   }
 
-  showHelp() {
-    this.isEnabled = !this.isEnabled
-    console.log(this.isEnabled)
-
+  filterSubCategory(id:number){
+    return this.subArray.filter((subCategory)=> subCategory.parent_id === id)
   }
+
+
 }

@@ -6,11 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiUrl = 'https://streetfeverapi.vercel.app/api/app';
+  private apiUrl = 'http://localhost:3000/api/category';
 
   constructor(private http: HttpClient,) { }
 
   getAllCategory(): Observable<any> {
     return this.http.get(`${this.apiUrl}/getAllCategory`)
+  }
+  getMainCategory():Observable<any>{
+    return this.http.get(`${this.apiUrl}/getMainCategory`)
   }
 }

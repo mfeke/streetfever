@@ -22,6 +22,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProductListsComponent } from './components/product-lists/product-lists.component';
+import { OrderComponent } from './components/order/order.component';
+import { MyfilterPipe } from './myfilter.pipe';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { ProductListsComponent } from './components/product-lists/product-lists.
     CartComponent,
     ProfileComponent,
     ProductListsComponent,
+    OrderComponent,
+    MyfilterPipe,
 
   ],
   imports: [
