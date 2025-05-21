@@ -64,16 +64,21 @@
 
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+<div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasExample"
     aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header bg-black d-flex align-items-center">
+    <div
+        class="offcanvas-header d-flex justify-content-between px-3 ps-0 bg-black text-white flex align-items-center">
         <img src="https://i.postimg.cc/y6tXFq4T/street-fever.png"
             class="logo mt-2 " alt>
-        <button type="button" class="btn-close bg-s p-2"
+        <svg xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16"
             data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
+            fill="currentColor" class="bi  bi-x-lg" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg>
     </div>
-    <div class="offcanvas-body pt-3">
+    <div class="offcanvas-body p-3">
         <div class="accordion" id="accordionExample">
             <div class="accordion" id="accordionExample">
                 <div
@@ -89,7 +94,8 @@
                             data-bs-dismiss="offcanvas"
                             [routerLink]="'/c/' + nav.name">
                             <p class="mb-0 bolder"
-                                *ngIf="nav.name !== 'sales'">{{ nav.name |uppercase }}</p>
+                                *ngIf="nav.name !== 'sales'">{{ nav.name
+                                |uppercase }}</p>
                             <p class="mb-0 bolder text-r"
                                 *ngIf="nav.name !== 'accessories'">{{ nav.name |
                                 uppercase
@@ -118,7 +124,7 @@
                         [id]="'collapse' + i"
                         *ngIf="nav.name !== 'sales' && nav.name !== 'accessories'"
                         data-bs-parent="#accordionExample">
-                        <div class="accordion-body p-0" >
+                        <div class="accordion-body p-0">
                             <div class="contain"
                                 *ngFor="let subNav of subArray| myfilter: nav._id">
                                 <p>{{ subNav.name | titlecase}}</p>
