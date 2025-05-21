@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<hr>
+
+<div class="contain">
+    <img [src]="product.image" alt class="w-100">
+
+    <div class="container">
+        <div class="d-flex over pb-2 my-2 mb-3">
+            <div class="container-image"
+                *ngFor="let colour of product.colourImage; let i = index">
+                <img [src]="colour" *ngIf="i > 1" alt class="colour me-3">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h6 class="bolder">{{product.title | uppercase}}</h6>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <p class="text-black">{{product.price}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container mt-3 d-flex justify-content-between">
+        <div class="col-6">
+            <h6 class="bolder">{{product.title | uppercase}}</h6>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <p class="text-black">{{product.price}}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="col-6">
+                <p class="text-black mb-2">COLOUR</p>
+
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <p class="text-black mb-2">BLACK</p>
+
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="col-6">
+                <p class="text-black mb-1">SELECT SIZE</p>
+
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <p class="text-black mb-2">BLACK</p>
+
+            </div>
+
+        </div>
+        <p class="text-black mb-1">SELECT SIZE</p>
+
+        <div class="row px-2  mb-3">
+            <div class="col-4 p-1" *ngFor="let size of product.sizes">
+                <div
+                    class="border mb-1  d-flex justify-content-center align-items-center p-2 w-100">
+                    <p class="size mb-0">{{size}}</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+            <h6 class="bold">MORE COLOURS</h6>
+
+        </div>
+    </div> -->
+
+</div>

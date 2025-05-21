@@ -24,6 +24,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ProductListsComponent } from './components/product-lists/product-lists.component';
 import { OrderComponent } from './components/order/order.component';
 import { MyfilterPipe } from './myfilter.pipe';
+import { ProductComponent } from './components/product/product.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { MyfilterPipe } from './myfilter.pipe';
     ProductListsComponent,
     OrderComponent,
     MyfilterPipe,
+    ProductComponent,
 
   ],
   imports: [

@@ -1,0 +1,14 @@
+.bolder{
+    font-size: 17px;
+    font-weight: bold;
+}
+.bold{
+    font-weight: bold;
+    font-size: 15px;
+}
+.colour{
+    width: 80px;
+}
+.over{
+    overflow: scroll;
+}

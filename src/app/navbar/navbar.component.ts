@@ -16,8 +16,6 @@ export class NavbarComponent implements OnInit {
     this.categoryService.getMainCategory().subscribe({
       next: data => {
         this.navArrays = data.categories
-
-        console.log(this.navArrays)
       }
     })
     this.categoryService.getAllCategory().subscribe({
