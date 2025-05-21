@@ -10,9 +10,9 @@
     <div class="col mb-3" *ngFor="let product of productList" routerLink="/product/{{product._id}}">
 
         <img [src]="product.image" alt class="w-100 mb-2">
-        <h6 class="text-black mb-2 bold">{{product.title}}</h6>
+        <p class="text-black mb-2 ">{{product.title}}</p>
 
-        <h6 class="text-black mb-1 bold">{{product.price}}</h6>
+        <p class="text-black mb-1">{{product.price}}</p>
     </div>
 
 </div>
