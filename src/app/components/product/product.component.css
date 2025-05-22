@@ -26,3 +26,14 @@
   grid-template-columns: auto auto auto auto;
   gap: 10px;
 }
+.pos{
+    position: relative;
+    bottom:  -390px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: gray;         /* default: inactive */
+}
+
+.carousel-indicators .active {
+  background-color: black;        /* active */
+}

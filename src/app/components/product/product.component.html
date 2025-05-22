@@ -2,8 +2,33 @@
 <hr class="mb-0">
 
 <div class="contain">
-    <img [src]="product.image" alt class="w-100">
+    <div id="carouselExampleCaptions" class="carousel mb-2 slide"
+        data-bs-ride="carousel">
+        <div class="carousel-indicators pos ">
+            <button 
+                *ngFor="let image of product.itemImage; let i = index"
+                type="button"
+                [attr.data-bs-target]="'#carouselExampleCaptions'"
+                [attr.data-bs-slide-to]="i"
+                [class.active]="i === 0"
+                [attr.aria-current]="i === 0 ? 'true' : null"
+                [attr.aria-label]="'Slide ' + (i + 1)">
+            </button>
+        </div>
 
+        <div class="carousel-inner">
+            <div *ngFor="let image of product.itemImage; let i = index"
+                class="carousel-item"
+                [class.active]="i === 0">
+                <img [src]="image" class="d-block w-100"
+                    alt="Product Image {{i + 1}}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{ product.title }}</h5>
+                    <p>Image {{ i + 1 }} of {{ product.itemImage.length }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="d-flex over pb-2 my-2 mb-3">
             <div class="container-image"
@@ -38,7 +63,8 @@
         </div>
         <div class="contai">
             <div class="grid-container">
-                <div class="size-container p-4 d-flex justify-content-center align-items-center w-100  bg-s text-black"
+                <div
+                    class="size-container p-4 d-flex justify-content-center align-items-center w-100  bg-s text-black"
                     *ngFor="let size of product.sizes">
                     <p class="text-center mb-0">{{size}}</p>
                 </div>
