@@ -29,7 +29,9 @@
 .bg-s {
     background-color: gainsboro;
 }
-
+.br{
+    border-radius: 0px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
