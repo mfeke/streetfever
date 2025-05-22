@@ -1,44 +1,54 @@
-.bolder{
+.bolder {
     font-size: 17px;
     font-weight: bold;
 }
-.bold{
+
+.bold {
     font-weight: bold;
     font-size: 15px;
 }
-.colour{
+
+.colour {
     width: 80px;
 }
-.over{
+
+.over {
     overflow: scroll;
 }
-.line{
-    font-size:14px;
+
+.line {
+    font-size: 14px;
 
 
 }
 
-.po{
+.po {
     position: relative;
-    bottom: 50px ;
+    bottom: 50px;
 }
 
-.bg-s{
+.bg-s {
     background-color: gainsboro;
 }
+
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
 }
-.pos{
-    position: relative;
-    bottom:  -390px;
+
+.pos {
+    position: absolute;
+    bottom: -8px;
+
 }
+
 .carousel-indicators [data-bs-target] {
-  background-color: gray;         /* default: inactive */
+    background-color: gray;
+    /* default: inactive */
 }
 
 .carousel-indicators .active {
-  background-color: black;        /* active */
+    background-color: black;
+    /* active */
 }

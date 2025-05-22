@@ -2,10 +2,10 @@
 <hr class="mb-0">
 
 <div class="contain po">
-    <div id="carouselExampleCaptions" class="carousel h-100 slide"
+    <div id="carouselExampleCaptions" class="carousel mb-3 h-100 slide"
         data-bs-ride="carousel">
         <div class="carousel-indicators pos ">
-            <button 
+            <button
                 *ngFor="let image of product.itemImage; let i = index"
                 type="button"
                 [attr.data-bs-target]="'#carouselExampleCaptions'"
@@ -20,7 +20,7 @@
             <div *ngFor="let image of product.itemImage; let i = index"
                 class="carousel-item"
                 [class.active]="i === 0">
-                <img [src]="image" class="d-block h-100 w-100"
+                <img [src]="image" class="d-block  h-100 w-100"
                     alt="Product Image {{i + 1}}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{ product.title }}</h5>
@@ -30,13 +30,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="d-flex over pb-2 my-2 mb-3">
-            <div class="container-image"
-                *ngFor="let colour of product.colourImage; let i = index">
-                <img [src]="colour" *ngIf="i > 1" alt class="colour me-3">
-            </div>
 
-        </div>
         <div class="row">
             <div class="col-6">
                 <h6 class="bolder mb-3">{{product.title | uppercase}}</h6>
@@ -62,7 +56,7 @@
 
         </div>
         <div class="contai">
-            <div class="grid-container">
+            <div class="grid-container mb-3">
                 <div
                     class="size-container p-4 d-flex justify-content-center align-items-center w-100  bg-s text-black"
                     *ngFor="let size of product.sizes">
@@ -71,7 +65,20 @@
 
             </div>
         </div>
+        <div class="d-flex  justify-content-between text-secondary">
+            <div class="col-6 ">
+                <p class=" mb-1 line bolder">MORE COLOUR</p>
 
+            </div>
+
+        </div>
+        <div class="d-flex over pb-2 my-2 mb-3">
+            <div class="container-image"
+                *ngFor="let colour of product.colourImage; let i = index">
+                <img [src]="colour" *ngIf="i > 1" alt class="colour me-3">
+            </div>
+
+        </div>
     </div>
     <!-- <div class="container mt-3 d-flex justify-content-between">
         <div class="col-6">
