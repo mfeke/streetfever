@@ -57,10 +57,19 @@
         </div>
         <div class="contai">
             <div class="grid-container mb-3">
-                <div
-                    class="size-container p-4 d-flex justify-content-center align-items-center w-100  bg-s text-black"
-                    *ngFor="let size of product.sizes">
-                    <p class="text-center mb-0">{{size.size}}</p>
+                <div class="contain" *ngFor="let size of product.sizes">
+
+                    <div
+                        class="colour p-4 d-flex justify-content-center align-items-center   bg-s text-black">
+                        <p class="text-center mb-0">{{size.size}}</p>
+
+                    </div>
+                    <div class="con">
+                        <div
+                            [ngClass]="{'border-top border-black not-stock' : size.stock === 0 }"></div>
+                        <div
+                            [ngClass]="{'border-top border-black not-stock-2' : size.stock === 0 }"></div>
+                    </div>
                 </div>
 
             </div>
@@ -83,7 +92,8 @@
             <button type="button" class="btn me-2 br w-100 btn-dark">
                 ADD TO BAG
             </button>
-            <button class="btn pt-2 br px-3 text-secondary border d-flex justify-content-center align-items-center">
+            <button
+                class="btn pt-2 br px-3 text-secondary border d-flex justify-content-center align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                     fill="currentColor" class="bi bi-heart-fill"
                     viewBox="0 0 16 16">

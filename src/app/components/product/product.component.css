@@ -21,6 +21,29 @@
 
 
 }
+.con{
+    width: 0px;
+}
+.not-stock {
+    transform: rotate(42deg);
+    /* Equal to rotateZ(45deg) */
+    position: relative;
+    top: -36px;
+    left: -13px;
+    width: 106px;
+
+
+}
+.not-stock-2 {
+    transform: rotate(-42deg);
+    /* Equal to rotateZ(45deg) */
+    position: relative;
+    top: -36px;
+    left: -13px;
+    width: 106px;
+
+
+}
 
 .po {
     position: relative;
@@ -29,9 +52,11 @@
 .bg-s {
     background-color: gainsboro;
 }
-.br{
+
+.br {
     border-radius: 0px;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
