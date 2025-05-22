@@ -12,3 +12,17 @@
 .over{
     overflow: scroll;
 }
+.line{
+    font-size:14px;
+
+
+}
+
+.bg-s{
+    background-color: gainsboro;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}

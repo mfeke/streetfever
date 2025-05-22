@@ -14,12 +14,38 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <h6 class="bolder">{{product.title | uppercase}}</h6>
+                <h6 class="bolder mb-3">{{product.title | uppercase}}</h6>
             </div>
             <div class="col-6 d-flex justify-content-end">
                 <p class="text-black">{{product.price}}</p>
             </div>
         </div>
+        <div class="d-flex mb-2 justify-content-between text-secondary">
+            <div class="col-6 ">
+                <p class=" mb-1 line">SELECT SIZE</p>
+
+            </div>
+            <div class="col-6 d-flex justify-content-end align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="28"
+                    height="28"
+                    viewBox="0 0 32 32"><path fill="currentColor"
+                        d="M0 8v16h32V8zm2 2h3v7h2v-7h2v4h2v-4h2v7h2v-7h2v4h2v-4h2v7h2v-7h2v4h2v-4h3v12H2z" />
+                </svg>
+                <p class="mb-0 line">SIZE GUIDE</p>
+
+            </div>
+
+        </div>
+        <div class="contai">
+            <div class="grid-container">
+                <div class="size-container p-4 d-flex justify-content-center align-items-center w-100  bg-s text-black"
+                    *ngFor="let size of product.sizes">
+                    <p class="text-center mb-0">{{size}}</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
     <!-- <div class="container mt-3 d-flex justify-content-between">
         <div class="col-6">
@@ -41,17 +67,7 @@
             </div>
 
         </div>
-        <div class="d-flex justify-content-between">
-            <div class="col-6">
-                <p class="text-black mb-1">SELECT SIZE</p>
 
-            </div>
-            <div class="col-6 d-flex justify-content-end">
-                <p class="text-black mb-2">BLACK</p>
-
-            </div>
-
-        </div>
         <p class="text-black mb-1">SELECT SIZE</p>
 
         <div class="row px-2  mb-3">
