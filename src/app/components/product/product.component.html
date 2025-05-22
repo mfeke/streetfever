@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 <hr class="mb-0">
 
-<div class="contain">
-    <div id="carouselExampleCaptions" class="carousel mb-2 slide"
+<div class="contain po">
+    <div id="carouselExampleCaptions" class="carousel h-100 slide"
         data-bs-ride="carousel">
         <div class="carousel-indicators pos ">
             <button 
@@ -16,11 +16,11 @@
             </button>
         </div>
 
-        <div class="carousel-inner">
+        <div class="carousel-inner h-100">
             <div *ngFor="let image of product.itemImage; let i = index"
                 class="carousel-item"
                 [class.active]="i === 0">
-                <img [src]="image" class="d-block w-100"
+                <img [src]="image" class="d-block h-100 w-100"
                     alt="Product Image {{i + 1}}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{ product.title }}</h5>
