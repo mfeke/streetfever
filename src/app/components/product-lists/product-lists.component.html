@@ -7,12 +7,15 @@
 </div>
 
 <div class="container ">
-    <div class="col mb-3" *ngFor="let product of productList" routerLink="/product/{{product._id}}">
+    <div class="col mb-3" *ngFor="let product of productList"
+        routerLink="/product/{{product._id}}">
+        <div class="contain" *ngIf="product.mainCategory">
+            <img [src]="product.image" alt class="w-100 mb-2">
+            <h6 class="text-black mb-2 bold">{{product.title | uppercase}}</h6>
 
-        <img [src]="product.image" alt class="w-100 mb-2">
-        <h6 class="text-black mb-2 bold">{{product.title}}</h6>
+            <h6 class="text-black mb-1 bold">{{product.price}}</h6>
+        </div>
 
-        <h6 class="text-black mb-1 bold">{{product.price}}</h6>
     </div>
 
 </div>

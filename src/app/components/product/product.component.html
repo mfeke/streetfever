@@ -40,6 +40,16 @@
             </div>
         </div>
         <div class="d-flex mb-2 justify-content-between text-secondary">
+            <div class="col-3">
+                <p class=" mb-1 line">COLOUR</p>
+
+            </div>
+            <div class="col d-flex justify-content-end align-items-center">
+                <p class="mb-0 line">{{product.productDescriptionColorDescription}}</p>
+            </div>
+
+        </div>
+        <div class="d-flex mb-2 justify-content-between text-secondary">
             <div class="col-6 ">
                 <p class=" mb-1 line">SELECT SIZE</p>
 
@@ -60,15 +70,16 @@
                 <div class="contain" *ngFor="let size of product.sizes">
 
                     <div
-                        class="colour p-4 d-flex justify-content-center align-items-center   bg-s text-black">
+                        class="colour p-4 d-flex justify-content-center align-items-center border    text-black"
+                        [ngClass]="{' bg-s' : size.stock === 0 }">
                         <p class="text-center mb-0">{{size.size}}</p>
 
                     </div>
                     <div class="con">
                         <div
-                            [ngClass]="{'border-top border-black not-stock' : size.stock === 0 }"></div>
+                            [ngClass]="{'border-top border-dark not-stock' : size.stock === 0 }"></div>
                         <div
-                            [ngClass]="{'border-top border-black not-stock-2' : size.stock === 0 }"></div>
+                            [ngClass]="{'border-top border-dark not-stock-2' : size.stock === 0 }"></div>
                     </div>
                 </div>
 

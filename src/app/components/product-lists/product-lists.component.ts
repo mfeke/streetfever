@@ -10,15 +10,20 @@ export class ProductListsComponent implements OnInit {
   imageUrl = "https://i.postimg.cc/Y2NyCDKC/1000002455.jpg"
 
   productList: any[] = []
+  uniqueProducts: any[] = [];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.getAllCategory().subscribe({
       next: (res) => {
-        console.log(res)
+
         this.productList = res
+        console.log(this.productList)
+
       }
     })
   }
+
+
 }
