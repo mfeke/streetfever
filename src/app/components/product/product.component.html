@@ -91,10 +91,10 @@
  
         <div class="d-flex over ">
             <div
-                *ngFor="let colour of colourArray; let i = index">
+                *ngFor="let colour of colourArray; let i = index" >
                 
                 <div class="me-2 pb-2 my-2 mb-3"
-                    *ngIf="colour.title === product.title && colour._id !== product._id ">
+                    *ngIf="colour.title === product.title && colour._id !== product._id " routerLink="/pd/{{colour._id}}">
                     <div class="container-img">
                         <img [src]="colour.itemImage[0]"
                             alt
