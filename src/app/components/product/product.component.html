@@ -67,18 +67,13 @@
 
         </div>
         <div class="contai">
-            <div class="grid-container mb-3">
-                <div class="contain" *ngFor="let size of product.sizes">
+            <div class="row mb-3">
+                <div class="col-3 " *ngFor="let size of product.sizes">
 
                     <div
-                        class="colour p-4 d-flex justify-content-center align-items-center border    text-black"
+                        class="w-100 mb-2 p-4 d-flex justify-content-center align-items-center border    text-black"
                         [ngClass]="{' bg-s' : size.stock === 0 }">
                         <p class="text-center mb-0">{{size.size}}</p>
-
-                    </div>
-                    <div class="con">
-                        <div
-                            [ngClass]="{'border-top border-dark not-stock' : size.stock === 0 }"></div>
 
                     </div>
                 </div>
