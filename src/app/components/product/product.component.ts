@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductComponent implements OnInit {
   product: any = {}
+
+  colourArray:any [] = []
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -17,11 +19,17 @@ export class ProductComponent implements OnInit {
       const id = params['id']
       this.productService.getProductById(id).subscribe({
         next: data => {
-          console.log(data)
           this.product = data
         }
       })
+      this.productService.getAllCategory().subscribe({
+        next:data=>{
+          console.log(data)
+          this.colourArray = data
+        }
+      })
     })
+
 
 
   }

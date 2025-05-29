@@ -19,8 +19,6 @@ export class ProductListsComponent implements OnInit {
       next: (res) => {
 
         this.productList = res
-        console.log(this.productList)
-
       }
     })
   }

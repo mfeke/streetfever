@@ -9,7 +9,7 @@
 <div class="container ">
     <div class="col mb-4" *ngFor="let product of productList"
         routerLink="/product/{{product._id}}">
-        <div class="contain" *ngIf="product.mainCategory">
+        <div class="contain" *ngIf="!product.colorOther">
             <div class="container-img mb-2" *ngFor="let image of product.itemImage; let i = index">
                 <img [src]="image" *ngIf="i == 0" alt class="w-100 img ">
             </div>
