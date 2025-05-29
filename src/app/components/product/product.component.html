@@ -32,10 +32,10 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-6">
+            <div class="col">
                 <h6 class="bolder mb-3">{{product.title | uppercase}}</h6>
             </div>
-            <div class="col-6 d-flex justify-content-end">
+            <div class="col-4 d-flex justify-content-end">
                 <p class="text-black">{{product.price}}</p>
             </div>
         </div>
@@ -92,7 +92,7 @@
                 *ngFor="let colour of colourArray; let i = index" >
                 
                 <div class="me-2 pb-2 my-2 mb-3"
-                    *ngIf="colour.title === product.title && colour._id !== product._id " routerLink="/pd/{{colour._id}}">
+                    *ngIf="colour.title === product.title && colour._id !== product._id "  routerLink="/pd/{{colour._id}}">
                     <div class="container-img">
                         <img [src]="colour.itemImage[0]"
                             alt

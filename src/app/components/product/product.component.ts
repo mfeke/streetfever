@@ -34,5 +34,8 @@ export class ProductComponent implements OnInit {
 
 
   }
+  subfilter(x:any){
+    this.product = x
+  }
 
 }
