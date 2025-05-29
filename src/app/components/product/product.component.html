@@ -1,10 +1,10 @@
-<app-navbar></app-navbar>
+<app-navbar class="bg-white"></app-navbar>
 <hr class="mb-0">
 
 <div class="contain po">
     <div id="carouselExampleCaptions" class="carousel mb-3 h-100 slide"
         data-bs-ride="carousel">
-        <div class="carousel-indicators pos ">
+        <div class="carousel-indicators  ">
             <button
                 *ngFor="let image of product.itemImage; let i = index"
                 type="button"
@@ -68,10 +68,10 @@
         </div>
         <div class="contai">
             <div class="row mb-3">
-                <div class="col-3 " *ngFor="let size of product.sizes">
+                <div class="col-4 " *ngFor="let size of product.sizes">
 
                     <div
-                        class="w-100 mb-3 p-3 d-flex justify-content-center align-items-center border    text-black"
+                        class="w-100 mb-3 p-4 d-flex justify-content-center align-items-center border    text-black"
                         [ngClass]="{' bg-s' : size.stock === 0 }">
                         <p class="text-center mb-0">{{size.size}}</p>
 
