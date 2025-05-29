@@ -80,11 +80,9 @@
 
             </div>
         </div>
-        <div class="d-flex  justify-content-between text-secondary"
-            *ngFor="let colour of colourArray; let i = index">
+        <div class="d-flex  justify-content-between text-secondary">
             <div class="col-6 ">
-                <p class=" mb-0 line bolder" *ngIf="i == 0">MORE COLOUR</p>
-
+                <p class=" mb-0 line bolder" *ngIf="colourArray.length > 1">MORE COLOUR</p>
             </div>
 
         </div>
