@@ -20,13 +20,14 @@ export class ProductComponent implements OnInit {
       this.productService.getProductById(id).subscribe({
         next: data => {
           this.product = data
+          console.log(data)
+
         }
       })
       this.productService.getAllCategory().subscribe({
         next:data=>{
           this.colourArray = data
           this.colourArray =this.colourArray.filter((x:any)=> this.product.title === x.title)
-          console.log(this.colourArray)
         }
       })
     })
@@ -34,8 +35,6 @@ export class ProductComponent implements OnInit {
 
 
   }
-  subfilter(x:any){
-    this.product = x
-  }
+
 
 }
