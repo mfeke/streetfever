@@ -1,3 +1,11 @@
-.icon{
+.icon {
     width: 50px;
+}
+
+.img {
+    background-image: url('https://i.postimg.cc/BbF3q68v/download-19.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:600px;
 }
