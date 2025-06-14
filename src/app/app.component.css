@@ -33,3 +33,6 @@
 .bold {
     font-weight: bold;
 }
+.body{
+    height: 515px !important;
+}
