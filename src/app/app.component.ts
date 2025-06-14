@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   bgurl ="https://i.postimg.cc/hjSW3dRD/New-wave-racket-club.jpg"
+  name = "latest fashions"
 }

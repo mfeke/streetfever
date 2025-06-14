@@ -1,24 +1,40 @@
 <div class="img">
-    <div
-        class=" container bg-white py-2 d-flex justify-content-between align-items-center text-black">
-        <div class="d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                fill="currentColor" class="bi me-2 bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg>
-            <img
-                src="https://mallmaverick.imgix.net/web/retailers/h-m/logo_aHR0cHNfX19tYWxsbWF2ZXJpY2suaW1naXgubmV0X3dlYl9wcm9wZXJ0eV9tYW5hZ2Vyc18xX3Byb3BlcnRpZXNfNzA4X2FsbF8yMDI0MDMyNjIyMDQ0Nl9obS0wMS5wbmc=?auto=format,compress"
-                alt class="icon">
+    <div class="bg">
+        <div
+            class=" container bg-white py-2 d-flex justify-content-between align-items-center text-black">
+            <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="currentColor" class="bi me-2 bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+                <img
+                    src="https://mallmaverick.imgix.net/web/retailers/h-m/logo_aHR0cHNfX19tYWxsbWF2ZXJpY2suaW1naXgubmV0X3dlYl9wcm9wZXJ0eV9tYW5hZ2Vyc18xX3Byb3BlcnRpZXNfNzA4X2FsbF8yMDI0MDMyNjIyMDQ0Nl9obS0wMS5wbmc=?auto=format,compress"
+                    alt class="icon">
+            </div>
+            <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                    fill="currentColor" class="bi bi-basket3"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6z" />
+                </svg>
+            </div>
         </div>
-        <div class="d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
-                fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
-                <path
-                    d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6z" />
-            </svg>
+        <div class="w-100 h-100 container d-flex  align-items-end pb-5">
+            <div class="pb-4">
+                <h3 class="text-center bold text-white">{{name| uppercase}}</h3>
+                <div class="d-flex">
+                    <p class="text-white me-4 link">SHOP WOMEN</p>
+                    <p class="text-white  link">SHOP MEN</p>
+
+                </div>
+
+            </div>
         </div>
     </div>
+
 </div>
 
 <router-outlet></router-outlet>
