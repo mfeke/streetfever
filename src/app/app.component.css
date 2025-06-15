@@ -20,8 +20,15 @@
     flex: 0 0 auto;
 
 }
+.w-10{
+    height: 400px;
+}
+.h-0{
+    height: 0px !important;
+    position: relative;
+    top: -70px;
 
-
+}
 .bold {
     font-weight: bold;
 }
