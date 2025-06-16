@@ -10,9 +10,15 @@
     text-decoration: underline;
 }
 
-.over{
+.over {
     overflow: scroll;
 }
+
+.over::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
 .full-background {
     background-size: cover;
     width: 300px;
@@ -20,19 +26,34 @@
     flex: 0 0 auto;
 
 }
-.w-10{
+
+.w-10 {
     height: 400px;
 }
-.h-0{
+
+.h-0 {
     height: 0px !important;
     position: relative;
     top: -70px;
 
 }
+
 .bold {
     font-weight: bold;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
 .w-80 {
     width: 300px;
+}
+
+.h-10 {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 220px;
 }
