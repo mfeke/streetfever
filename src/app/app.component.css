@@ -8,14 +8,13 @@
 
 .link {
     text-decoration: underline;
-    
 }
 
 .over {
     overflow: scroll;
 }
 
-.over::-webkit-scrollbar{
+.over::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 }
@@ -35,8 +34,14 @@
 .h-0 {
     height: 0px !important;
     position: relative;
-    top: -255px;
+    top: -70px;
 
+}
+
+.h-20 {
+    height: 0px !important;
+    position: relative;
+    top: -255px;
 }
 
 .bold {
