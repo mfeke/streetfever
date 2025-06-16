@@ -39,8 +39,22 @@
     </div>
 
 </div>
+<div class="grid-container pb-2">
+    <div class="h-10" *ngFor="let image of urls.img; let i = index"
+        [style.backgroundImage]="'url(' + image + ')'">
 
+    </div>
+</div>
+<div class="h-0 container d-flex justify-content-center">
+    <div class="contain ">
+        <h5 class="bold text-white">{{urls.name}}</h5>
+        <div class="d-flex">
+            <p class="text-white me-4  link">SHOP {{urls.name}}</p>
 
+        </div>
+    </div>
+
+</div>
 <!-- <button class="btn btn-primary" type="button"">Toggle
     bottom offcanvas</button> -->
 

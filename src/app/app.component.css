@@ -8,6 +8,7 @@
 
 .link {
     text-decoration: underline;
+    
 }
 
 .over {
@@ -34,7 +35,7 @@
 .h-0 {
     height: 0px !important;
     position: relative;
-    top: -70px;
+    top: -255px;
 
 }
 
@@ -53,7 +54,7 @@
 
 .h-10 {
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     height: 220px;
 }

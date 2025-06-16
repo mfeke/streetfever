@@ -15,12 +15,12 @@ export class AppComponent {
     { image: "https://i.postimg.cc/jSpWnN84/HOME-d.jpg",name:"Decor" }
   ]
   urls={
-    img:["https://i.postimg.cc/prkh9LrQ/Women-s-Bags-Shop-Accessories-Online.jpg",
-      "https://i.postimg.cc/Zns2K68r/Tween-Girls-Sleeveless-Overhead-Hoodie-And-Short-With-Number-Print-2-Piece-Set-Back-To-School.jpg",
-      "https://i.postimg.cc/x12hjjHp/Ass-Won.jpg",
-      "https://i.postimg.cc/wTh4rKPX/sunglasses.jpg"
+    img:["https://i.postimg.cc/j2RfC8VB/Ladies-Leather-Purse-Coffee-color.jpg",
+      "https://i.postimg.cc/jSSGyKQS/dunhill.jpg",
+      "https://i.postimg.cc/vTvN6S4n/dress.jpg",
+      "https://i.postimg.cc/26rdBjhH/download-23.jpg"
     ],
-    name:""
+    name:"THE GIFT GUIDE"
   }
   name = "latest fashions"
 
