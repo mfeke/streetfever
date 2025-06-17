@@ -30,3 +30,9 @@
 .body{
     height: 515px !important;
 }
+.roboto-slab{
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
