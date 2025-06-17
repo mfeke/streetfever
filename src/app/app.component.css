@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 500px;
 }
 
 .link {
@@ -41,13 +41,20 @@
 .h-20 {
     height: 0px !important;
     position: relative;
-    top: -255px;
+    top: -75px;
 }
-
+.span{
+    font-size: 15px;
+}
 .bold {
     font-weight: bold;
 }
-
+.br{
+    border-radius: 0px;
+}
+.text{
+    font-size: 14px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;

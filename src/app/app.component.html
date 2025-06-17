@@ -1,17 +1,15 @@
+ <app-navbar></app-navbar>
+
 <div class="img">
-    <app-navbar></app-navbar>
-    <div class="w-100 h-100 container d-flex  align-items-end pb-5">
-        <div class="pb-4">
+    <div class="w-100 h-100 container d-flex  align-items-end">
+        <div class="pb-2">
             <h5 class="bold text-white">{{name| uppercase}}</h5>
             <div class="d-flex">
                 <p class="text-white me-4 link">SHOP WOMEN</p>
                 <p class="text-white  link">SHOP MEN</p>
-
             </div>
-
         </div>
     </div>
-
 </div>
 <div class="py-2 d-flex over">
     <div *ngFor="let url of bgUrls"
@@ -45,7 +43,7 @@
 
     </div>
 </div>
-<div class="h-20 container d-flex justify-content-center">
+<div class="h-20 container d-flex justify-content-start ">
     <div class="contain ">
         <h5 class="bold text-white">{{urls.name}}</h5>
         <div class="d-flex">
@@ -57,5 +55,22 @@
 </div>
 <!-- <button class="btn btn-primary" type="button"">Toggle
     bottom offcanvas</button> -->
+<div class="bg-light py-3">
+    <div class="container">
+        <p class="text-center bold span">SIGN-UP FOR OUR NEWSLETTER AND RECEIVE
+            10% OFF YOUR FIRST ORDER*</p>
+    </div>
+    <div class="form container">
+        <input type="text" class="form-control py-2 br"
+            placeholder="Enter your email address">
+        <button type="button"
+            class="btn btn-dark my-3   br w-100">REGISTER</button>
+        <div class="d-flex justify-content-center">
+            <span class="span text text-center"><span class="link">*T&C
+                    APPLY.</span> VIEW OUR <span class="link">PRIVACY
+                    POLICY</span> TO FIND OUR HOW YOUR DATA IS HANDLED</span>
 
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>
