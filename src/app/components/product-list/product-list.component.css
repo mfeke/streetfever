@@ -1,0 +1,15 @@
+span{
+    font-size: 14px;
+}
+.heart-container{
+    height: 0px;
+}
+
+.full-background {
+  background-size: cover;
+  height: 400px;
+
+}
+p{
+    font-size: 15px;
+}
