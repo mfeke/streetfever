@@ -3,6 +3,8 @@ span{
 }
 .heart-container{
     height: 0px;
+    position: relative;
+    top: 10px;
 }
 
 .full-background {
