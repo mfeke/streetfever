@@ -1,13 +1,14 @@
 .img {
-    background-image: url('https://i.postimg.cc/BbF3q68v/download-19.jpg');
+    background-image: url('https://i.postimg.cc/Z54Q8dcG/download-5.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 410px;
 }
 
 .link {
     text-decoration: underline;
+    font-size: 14px;
 }
 
 .over {
