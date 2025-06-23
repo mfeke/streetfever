@@ -1,6 +1,6 @@
 <div class="container pt-2">
 
-    <div
+    <!-- <div
         [style.backgroundImage]="'url(' + bgurl + ')'"
         class="full-background  ">
         <div class="heart-container d-flex justify-content-end w-100 p-2">
@@ -14,14 +14,20 @@
                 </svg>
             </div>
         </div>
+    </div> -->
+    <div class="d-flex over">
+        <img [src]="image"
+            *ngFor="let image of removeDuplicateImages(obj.images)" alt
+            class="w-100">
+
     </div>
     <div class="d-flex py-2 ">
         <div class="col-8">
-            <p class="text-black bold mb-1">{{ name}}</p>
+            <p class="text-black bold mb-1">{{ obj.title}}</p>
 
         </div>
         <div class="col ">
-            <p class="text-black text-end mb-1"> R400</p>
+            <p class="text-black text-end mb-1"> {{obj.price}}</p>
 
         </div>
 
@@ -33,7 +39,7 @@
         </div>
         <div class="col-8 d-flex justify-content-end">
             <div class="con">
-                <p class="mb-1">BLACK</p>
+                <p class="mb-1">{{obj.colour}}</p>
             </div>
 
         </div>
@@ -44,18 +50,27 @@
 
         </div>
         <div class="col-8 d-flex justify-content-end">
-            <div class="con" *ngFor="let si of sizes; let i = index">
+            <div class="con" *ngFor="let det of obj.sizes; let i = index">
                 <p *ngIf="i !== sizes.length - 1"
-                    class="me-3 mb-2">
-                    {{ si }}
+                    class="me-3 mb-2"
+                    [ngStyle]="{'color': det.stock > 0 ? 'black' : 'gray'}">
+                    {{ det.size }}
                 </p>
                 <p *ngIf="i === sizes.length - 1"
-                    class="mb-1">
-                    {{ si }}
+                    class="mb-1"
+                    [ngStyle]="{'color': det.stock > 0 ? 'black' : 'gray'}">
+                    {{ det.size }}
                 </p>
             </div>
 
         </div>
     </div>
     <button class="btn btn-secondary my-4 p br">ADD TO BASKET</button>
+    <p class="text-black bold mb-1">MORE COLOURS</p>
+
+    <div class="d-flex mb-3">
+        <img [src]="objs.images[0]"
+            *ngFor="let objs of getUniqueProductsByTitle(objList)"
+            class="colour-img me-3" [ngClass]="{'border border-black': objs._id === obj._id}">
+    </div>
 </div>

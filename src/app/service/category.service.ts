@@ -16,4 +16,7 @@ export class CategoryService {
   getMainCategory():Observable<any>{
     return this.http.get(`${this.apiUrl}/getMainCategory`)
   }
+  getAllCategoryByName(name:any):Observable<any>{
+    return this.http.get(`${this.apiUrl}/getCategoryByName/${name}`)
+  }
 }

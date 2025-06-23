@@ -15,7 +15,21 @@ p {
 .bold {
   font-weight: bold;
 }
-.br{
-    border-radius: 0px;
-    font-size: 14px;
+.br {
+  border-radius: 0px;
+  font-size: 14px;
+}
+.img {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: x always;
+}
+.over {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type:x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+.colour-img{
+  width: 80px;
 }
