@@ -21,8 +21,8 @@ export class AppComponent {
     img: [
       'https://i.postimg.cc/j2RfC8VB/Ladies-Leather-Purse-Coffee-color.jpg',
       'https://i.postimg.cc/jSSGyKQS/dunhill.jpg',
-      'https://i.postimg.cc/vTvN6S4n/dress.jpg',
-      'https://i.postimg.cc/26rdBjhH/download-23.jpg',
+      'https://i.postimg.cc/Z54Q8dcG/download-5.jpg',
+      'https://i.postimg.cc/sgmqmCVf/download-6.jpg',
     ],
     name: 'THE GIFT GUIDE',
   };
