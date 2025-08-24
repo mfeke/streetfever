@@ -1,0 +1,20 @@
+
+.bg-dark {
+  background-color: rgb(15, 15, 15) !important;
+}
+
+.bg-s {
+  background-color: rgb(38, 38, 38);
+}
+input::placeholder{
+  color: rgb(119, 119, 119) !important;
+  height: 20px;
+  font-style: italic;
+  font-size: 17px;
+}
+input:focus{
+  box-shadow: none !important;
+}
+.flag{
+    width: 20px;
+}

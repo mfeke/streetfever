@@ -1,4 +1,83 @@
- <app-navbar></app-navbar>
+<div class="bg-dark vh-100 text-white">
+  <div class="container py-3 d-flex justify-content-between align-items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="34"
+      height="34"
+      fill="currentColor"
+      class="bi border-white border p-2 rounded bi-chevron-left"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+      />
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="25"
+      fill="currentColor"
+      class="bi bi-question-circle"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+      />
+      <path
+        d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"
+      />
+    </svg>
+  </div>
+  <div class="container pt-3 mb-2">
+    <h5 class="text">Welcome Back</h5>
+    <span class="text-secondary"
+      >Enter the phone number associated with your iKoloi account</span
+    >
+  </div>
+  <div class="container d-flex py-2">
+    <div
+      class="bg-s d-flex align-items-center rounded px-3 me-2 p-2"
+      *ngFor="let country of details"
+    >
+      <!-- <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="27"
+        height="27"
+        viewBox="0 0 72 72"
+      >
+        <path fill="#d22f27" d="M5 17h62v38H5z" />
+        <path fill="#1e50a0" d="M5 36h62v19H5z" />
+        <path
+          fill="#5c9e31"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m5 55l21-13h41V30H26L5 17z"
+        />
+        <path
+          stroke="#f1b31c"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20 36L5 46V26z"
+        />
+        <path
+          fill="none"
+          stroke="#000"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 17h62v38H5z"
+        />
+      </svg> -->
+      <img [src]="country.flags.png" class="flag" alt="Flag" />
 
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+      <p class="ms-2 mb-0">
+        {{ country.idd.root }}{{ country.idd.suffixes[0] }}
+      </p>
+    </div>
+    <input type="number" class="form-control bg-s border-0 text-white"  placeholder="Enter phone number"/>
+  </div>
+</div>
