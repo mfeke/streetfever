@@ -9,6 +9,7 @@ import { ApisService } from './services/apis.service';
 export class AppComponent implements OnInit {
   currentIndex = 1;
   details: any[] = [];
+  phoneNumber:string= ""
 
   constructor(private apiService: ApisService) {}
   ngOnInit(): void {
@@ -28,5 +29,13 @@ export class AppComponent implements OnInit {
           },
         });
     });
+  }
+
+  smsBtn(){
+    this.apiService.sendSms(this.phoneNumber, "Hello from Angular").subscribe({
+      next:data=>{
+        console.log(data)
+      }
+    })
   }
 }
