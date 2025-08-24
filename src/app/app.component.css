@@ -18,3 +18,9 @@ input:focus{
 .flag{
     width: 20px;
 }
+.btn{
+  background-color: rgba(0, 0, 255, 0.1) !important;
+  color: rgb(92, 92, 236) !important;
+  border-radius: 50px !important;
+
+}
