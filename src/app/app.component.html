@@ -222,9 +222,15 @@
       <input type="text" class="form-control bg-dark text-white border-0" />
     </div>
     <div class="contain" *ngFor="let country of countries">
-      <div class="container d-flex">
-        <img [src]="country.flags.png" alt="" class="flag-sm me-3" />
-        <p class="mb-0 font">{{country.name.common}}</p>
+      <div class="container d-flex justify-content-between">
+        <div class="d-flex">
+          <img [src]="country.flags.png" alt="" class="flag-sm me-3" />
+          <div class="con" *ngIf="country">
+          <p class="mb-0 font text-white">{{ country.name.common }}</p>
+
+          </div>
+        </div>
+        <p class="mb-0">{{ country.idd.root }}{{ country.idd.suffixes[0] }}</p>
       </div>
       <hr />
     </div>
