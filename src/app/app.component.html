@@ -1,4 +1,4 @@
-<div class="bg-dark vh-100 text-white">
+<div class="bg-dark vh-100 fixed-top text-white">
   <div class="container py-3 d-flex justify-content-between align-items-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -78,10 +78,34 @@
         {{ country.idd.root }}{{ country.idd.suffixes[0] }}
       </p>
     </div>
-    <input type="number" class="form-control bg-s border-0 text-white"  placeholder="Enter phone number"/>
+    <input
+      type="number"
+      class="form-control bg-s border-0 text-white"
+      placeholder="Enter phone number"
+    />
   </div>
   <div class="container">
     <p class="text-primary">Lost acess to my phone number</p>
     <button type="button" class="btn btn-bor w-100 py-3 mt-3">Continue</button>
+    <div class="d-flex align-items-center py-4">
+      <hr class="w-100" />
+      <span class="text-secondary mx-3">OR</span>
+      <hr class="w-100" />
+    </div>
+    <button type="button" class="btn btn-s align-items-center w-100 py-3 bg-s text-white d-flex justify-content-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="currentColor"
+        class="bi me-2 bi-envelope-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+        />
+      </svg>
+      <p class="mb-0">Continue with email</p>
+    </button>
   </div>
 </div>
