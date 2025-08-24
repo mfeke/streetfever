@@ -28,3 +28,9 @@ input:focus{
 
   border-radius: 50px !important;
 }
+.btn-close{
+  color: white !important;
+}
+.flag-sm{
+  width: 30px;
+}

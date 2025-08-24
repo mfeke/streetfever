@@ -21,6 +21,9 @@ export class ApisService {
   getCountryDetails(name: any): Observable<any> {
     return this.http.get(`${this.apiLocUrl}/${name}`);
   }
+  getAllCountries():Observable<any>{
+    return this.http.get('https://restcountries.com/v3.1/all?fields=name,flags,cca2,cca3,idd')
+  }
 
   sendSms(to: string, text: string): Observable<any> {
     const body = new HttpParams()

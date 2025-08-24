@@ -9,33 +9,37 @@ import { ApisService } from './services/apis.service';
 export class AppComponent implements OnInit {
   currentIndex = 1;
   details: any[] = [];
-  phoneNumber:string= ""
+  phoneNumber: string = '';
+  countries: any[] = [];
 
   constructor(private apiService: ApisService) {}
   ngOnInit(): void {
     window.navigator.geolocation.getCurrentPosition((position) => {
-      console.log();
       this.apiService
         .getCountry(position.coords.latitude, position.coords.longitude)
         .subscribe({
           next: (data) => {
-            console.log(data.address);
             this.apiService.getCountryDetails(data.address.country).subscribe({
               next: (data) => {
-                console.log(data);
-                this.details = data
+                this.details = data;
               },
             });
           },
         });
     });
+    this.apiService.getAllCountries().subscribe({
+      next: (data) => {
+        console.log(data);
+        this.countries = data;
+      },
+    });
   }
 
-  smsBtn(){
-    this.apiService.sendSms(this.phoneNumber, "Hello from Angular").subscribe({
-      next:data=>{
-        console.log(data)
-      }
-    })
+  smsBtn() {
+    this.apiService.sendSms(this.phoneNumber, 'Hello from Angular').subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+    });
   }
 }

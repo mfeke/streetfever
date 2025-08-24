@@ -37,8 +37,11 @@
   </div>
   <div class="container d-flex py-2 mb-2">
     <div
-      class="bg-s d-flex align-items-center rounded px-3 me-2 p-2"
+      class="bg-s btn text-white d-flex align-items-center rounded px-3 me-2 p-2"
       *ngFor="let country of details"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasBottom"
+      aria-controls="offcanvasBottom"
     >
       <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +90,13 @@
   </div>
   <div class="container">
     <p class="text-primary">Lost acess to my phone number</p>
-    <button type="button" class="btn btn-bor w-100 py-3 mt-3" (click)="smsBtn()">Continue</button>
+    <button
+      type="button"
+      class="btn btn-bor w-100 py-3 mt-3"
+      (click)="smsBtn()"
+    >
+      Continue
+    </button>
     <div class="d-flex align-items-center py-4">
       <hr class="w-100" />
       <span class="text-secondary mx-3">OR</span>
@@ -166,5 +175,58 @@
       </svg>
       <p class="mb-0">Continue with Apple</p>
     </button>
+  </div>
+</div>
+
+<div
+  class="offcanvas offcanvas-bottom h-100 bg-dark text-white"
+  tabindex="-1"
+  id="offcanvasBottom"
+  aria-labelledby="offcanvasBottomLabel"
+>
+  <div class="offcanvas-header d-flex justify-content-between">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+      Select your country
+    </h5>
+    <button type="button" class="btn text-white" data-bs-dismiss="offcanvas">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-x-lg"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="offcanvas-body small pt-0 text-secondary">
+    <div
+      class="rounded border p-2 align-items-center mb-4 border-secondary d-flex"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        fill="currentColor"
+        class="bi bi-search"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+        />
+      </svg>
+      <input type="text" class="form-control bg-dark text-white border-0" />
+    </div>
+    <div class="contain" *ngFor="let country of countries">
+      <div class="container d-flex">
+        <img [src]="country.flags.png" alt="" class="flag-sm me-3" />
+        <p class="mb-0 font">{{country.name.common}}</p>
+      </div>
+      <hr />
+    </div>
   </div>
 </div>
