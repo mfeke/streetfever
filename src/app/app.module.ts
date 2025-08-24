@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SortPipe } from './sort.pipe';
+import { NumberLoginComponent } from './components/acounts/number-login/number-login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SortPipe,
+    NumberLoginComponent,
 
   ],
   imports: [
