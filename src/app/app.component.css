@@ -1,14 +1,30 @@
 .bg-dark {
   background-color: rgb(15, 15, 15) !important;
 }
-.bold{
+.bold {
   font-weight: bold;
 }
 
 .text-s {
   color: rgb(15, 15, 15) !important;
 }
-.bolder{
+.bolder {
   font-size: 29px;
   margin-right: 5px;
+}
+.bg-s {
+  background-color: #dddbcb;
+  width: 190px;
+}
+.round {
+  border-radius: 20px;
+}
+.bg-light {
+  background-color: #e8e8e8 !important;
+}
+.car {
+  width: 100px;
+}
+.border{
+  border: 3px solid gainsboro !important;
 }
